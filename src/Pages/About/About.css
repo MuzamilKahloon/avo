@@ -1,0 +1,201 @@
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full-screen height */
+    clip-path: polygon(0 0, 0 87%, 68% 100%, 100% 88%, 100% 0);
+
+  }
+  
+  .hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures the image stays in the background */
+  }
+  
+  .content-part {
+    position: absolute;
+    bottom: 130px; /* Push content to the bottom */
+    left: 130px; /* Push content to the left */
+    color: white;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 10px;
+   
+   
+  }
+  
+  .elements {
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px !;
+    line-height: 21px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb .arrow {
+    color: red;
+    margin: 0 5px;
+    display: flex;
+  }
+  
+  .abt {
+    font-weight: 900 !important;
+    color: white !important;
+    font-size: 40px !important;
+    line-height: 60px !important;
+  }
+  
+  
+
+  /* Team */
+
+  .team {
+    text-align: center;
+    padding: 50px 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    width: 75vw;
+    margin-left: 130px;
+  }
+  
+  .team h1 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 42px;
+    line-height: 54px;
+    margin-bottom: 40px;
+    font-weight: 900;
+  }
+  
+  .team-cards, .team-card2 {
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  .team-cards .card1, .team-cards .card2, .team-cards .card3, .team-cards .card4,
+  .team-card2 .card5, .team-card2 .card6, .team-card2 .card7, .team-card2 .card8 {
+    
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .team-cards img, .team-card2 img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .team-cards h3, .team-card2 h3 {
+    font-size: 24px; /* Font size remains the same */
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    color: black; /* Color stays black */
+    line-height: 20px;
+  }
+  
+  .team-cards h3:hover, .team-card2 h3:hover {
+    color: red; /* Color changes to red on hover */
+  }
+  
+  
+  .team-cards p, .team-card2 p {
+    color: #ff0000;
+    font-weight: 600;
+    line-height: 26px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  
+ 
+  
+  /* Social Media Icon Styling */
+  .social-icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    color: white;
+    background: red;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 12px !important;
+    transition: background 0.3s ease;
+  }
+  
+  
+  
+  .card1:hover .social-icons, .card2:hover .social-icons,
+  .card3:hover .social-icons, .card4:hover .social-icons,
+  .card5:hover .social-icons, .card6:hover .social-icons,
+  .card7:hover .social-icons, .card8:hover .social-icons {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  @media (max-width:700px){
+    .hero{
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    .hero-content{
+      margin-top: -20px;
+    }
+    .team{
+      width: 100%;
+    }
+  }
+  @media (min-width:701px) and (max-width:1030px){
+    .hero{
+      width: 100vw;
+    }
+    .content-part{
+      margin-bottom: 150px;
+    }
+    .elements{
+      font-size: 30px;
+    }
+    .content-part h1{
+      font-size: 50px;
+      
+    }
+    .team{
+      width: 100vw;
+    }
+    .team h1{
+      margin-left: -200px;
+    }
+    .team-cards, .team-card2{
+      display: flex;
+      flex-direction: column;
+      margin-top: 150px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 250px;
+      width: 100%;
+    }
+  }

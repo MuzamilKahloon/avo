@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Hides overflow */
+    clip-path: polygon(0 0, 0 87%, 68% 100%, 100% 88%, 100% 0); /* This could be cropping your images */
+}
+
+.slide {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* Reduced padding for better layout */
+    color: white;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened overlay */
+    z-index: 0;
+}
+
+.content {
+    z-index: 1;
+    max-width: 40%;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-weight: 900 !important;
+    line-height: 40px;
+    font-size: 36px !important;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+
+.content p {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px !important;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: darkred;
+}
+
+.counter {
+    margin-bottom: 140px;
+    z-index: 1;
+    text-align: center; /* Center the content */
+    margin-right: 60px;
+    position: relative;
+}
+
+.number-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px; /* Adds space between the number and the text */
+}
+
+.red-column {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    width: 4px;
+    background-color: red;
+}
+
+.numbers {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 32px;
+    line-height: 60px;
+    display: block;
+}
+
+.description {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 5px; /* Adds a small gap above the description */
+}
+
+.play-button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slider-indicators span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.slider-indicators span.active {
+    background-color: red;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .slider {
+        width: 100vw;
+        height: auto;        
+        overflow-x: hidden;
+    }
+
+    .slide {
+        width: 80vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse; /* Counter first, content below */
+        justify-content: flex-end; /* Align to bottom */
+        align-items: flex-start; /* Align to left */
+        padding: 20px;
+        position: relative;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    .content {
+        width: 40%;
+        padding-left: 10px;
+        margin-bottom: 30px;
+        color: #fff;
+        margin-left: 0px;
+        height: auto;
+        text-align: left;
+        margin-top: 30px;
+    }
+    
+    .content h1 {
+        font-size: 24px !important; /* Smaller font size for smaller screens */
+        margin-bottom: 10px;
+        font-weight: 900;
+        line-height: 24px;   
+    }
+
+    .content p {
+        font-size: 14px; /* Adjust paragraph size */
+        margin-bottom: 15px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .explore-btn {
+        padding: 12px 20px; /* Smaller button padding */
+        font-size: 14px;
+    }
+    
+    .content {
+        margin-bottom: 20px; /* Reduce bottom margin for smaller screens */
+    }
+    
+    .content h1,
+    .content p {
+        text-align: center; /* Center align text for better layout on small screens */
+    }
+    
+    .explore-btn:hover {
+        background-color: #b40810;
+    }
+    
+    .counter {
+        color: #fff;
+        margin-bottom: 0px;
+        margin-top: 90px;
+        margin-left: -10px; /* Reduced to move it closer to the left */
+    }
+
+    .counter h2 {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .counter span {
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .counter .numbers {
+        font-size: 36px; /* Larger for better emphasis */
+        color: #fff;
+    }
+
+    .counter .red-column {
+        height: 100%;
+        width: 5px;
+        background-color: red;
+        margin-left: 10px;
+    }
+
+    .description {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 5px; /* Spacing for description */
+    }
+
+    .play-button {
+        position: absolute;
+        bottom: 50px; /* Positioned closer to bottom */
+        left: 75%;
+        transform: translate(-50%, 0); /* Center horizontally */
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .play-button svg {
+        color: red;
+    }
+
+    .slider-indicators {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .slider-indicators span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .slider-indicators span.active {
+        background-color: red;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1030px) {
+    .slider {
+        width: 105vw;
+    }
+    .content h1{
+        font-size: 50px !important;
+    }
+    .content p{
+        font-size: 30px !important;
+    }
+    .content .explore-btn{
+        width: 180px;
+        height: 80px;
+        font-size: 22px;
+    }
+     .numbers{
+        font-size: 30px !important;
+     }
+}

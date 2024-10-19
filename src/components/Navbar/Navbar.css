@@ -1,0 +1,146 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between !important;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: transparent;
+}
+
+.logo {
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 43px;
+    color: #ffffff;
+    margin-left: 110px;
+}
+
+.logo span {
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    margin-right: 25px;
+    font-size: 13px;
+}
+
+ul li a:hover {
+    color: red;
+}
+
+ul li a.active {
+    color: red;
+}
+
+/* Toggle button for small and medium screens */
+.toggle-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px;
+        width: 100vw;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        max-height: 0; 
+        opacity: 0;
+    }
+
+    ul.nav-links.open {
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    ul li {
+        padding: 15px;
+    }
+
+    .toggle-icon {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+
+@media (min-width: 701px) and (max-width: 1030px) {
+    .navbar {
+        padding: 20px;
+        width: 100vw;
+    }
+
+    .logo {
+        margin-left: 0;
+        font-size: 50px;
+    }
+    .toggle-icon{
+        font-size: 40px;
+    }
+    
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    }
+
+    ul.nav-links.open {
+        max-height: 100vh; 
+        opacity: 1;
+    }
+
+    ul li {
+        padding: 15px;
+    }
+
+    .toggle-icon {
+        display: block;
+        margin-right: 20px;
+    }
+    
+}

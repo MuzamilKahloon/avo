@@ -1,0 +1,159 @@
+/* General Footer Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: "Nunito Sans", Arial, sans-serif;
+  width: 100vw;
+  height: 100vh; /* Changed from 100vh to auto to fit content */
+  clip-path: polygon(72% 7%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Better distribution */
+  max-width: 85%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.footer-section {
+  min-width: 200px; /* Adjusted for better spacing */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+/* Footer Headers */
+.footer-section h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px; /* Reduced margin */
+  font-weight: 700;
+}
+
+/* Footer Text */
+.footer-section p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px; /* Reduced line height */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ensure ul items display in column */
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Removed padding */
+}
+
+
+
+.footer-section ul li a {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 20px; /* Adjusted for consistency */
+  font-family: "Nunito Sans", Arial, sans-serif;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #aaa;
+}
+
+/* Social Media Icons */
+
+
+/* Contact Info */
+.special {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section ul li svg {
+  margin-right: 8px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
+}
+
+.footer-section ul li svg:hover {
+  color: #aaa;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 30px; /* Adjusted margin */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 24px; /* Adjusted line height */
+}
+
+.footer-bottom p a {
+  color: rgb(209, 0, 44);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-bottom p a:hover {
+  color: #ff5722;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 700px) {
+  .footer {
+      padding: 20px;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .footer-section {
+      width: 100%;
+  }
+
+  .footer-bottom {
+      font-size: 12px;
+      padding-top: 20px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1030px) {
+  .footer {
+      padding: 20px;
+      width: 105vw;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .footer-section {
+      width: 100%;
+  }
+  .footer-section h3{
+    font-size: 30px;
+  }
+  .footer-section ul li{
+    font-size: 26px;
+  }
+
+  .footer-bottom p{
+      font-size: 28px;
+      padding-top: 20px;
+      padding: 20px;
+  }
+}

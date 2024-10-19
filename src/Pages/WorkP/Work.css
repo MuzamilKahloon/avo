@@ -1,0 +1,60 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    clip-path: polygon(0 0, 0 87%, 68% 100%, 100% 88%, 100% 0);
+
+  }
+  
+  .hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures the image stays in the background */
+  }
+  
+  .content-part {
+    position: absolute;
+    bottom: 130px; /* Push content to the bottom */
+    left: 130px; /* Push content to the left */
+    color: white;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 10px;
+   
+   
+  }
+  
+  .elements {
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px !;
+    line-height: 21px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb .arrow {
+    color: red;
+    margin: 0 5px;
+    display: flex;
+  }
+  
+  .abt {
+    font-weight: 900 !important;
+    color: white !important;
+    font-size: 40px !important;
+    line-height: 60px !important;
+  }
+  
